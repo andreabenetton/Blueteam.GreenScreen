@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+	<TargetFramework>net6.0</TargetFramework>
+	<RootNamespace>Blueteam.GreenScreen</RootNamespace>
+
+	<Authors>BlueTeam OÜ (14454093)</Authors>
+	<Company>BlueTeam OÜ (14454093)</Company>
+	<Copyright>Copyright 2022 (c) BlueTeam OÜ</Copyright> 
+	<Description>GreenScreen is a component that a page overlay allows your monitor to consume less energy when idle</Description>
+	<IncludeSymbols>true</IncludeSymbols>
+	<OutputType>Library</OutputType>
+	<RepositoryType>git</RepositoryType>
+	<PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<Title>Blueteam.GreenScreen</Title>
+	<PackageProjectUrl>https://github.com/andreabenetton/Blueteam.GreenScreen</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/andreabenetton/Blueteam.GreenScreen</RepositoryUrl>
+	<PackageTags>energy saving; climate change</PackageTags>
+	<PackageReleaseNotes>This is the first iteration of the package</PackageReleaseNotes>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
